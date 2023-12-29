@@ -41,12 +41,14 @@ elif option == 'setting.ini':
 	st.info('* 請在sender 輸入送件人資訊 \n * 因為商城與郵局國家命名規則不同，\
 		請在country 設定兩份文件的國別，設定規則：商城文件中「Ship Country」欄位 = 郵局文件中「收件人國別」，\
 		如果沒有設定，將顯示空白，例：United States=U.S.A.')
+	st.markdown('[更新設定檔網址](https://github.com/Ryan-Fukuoka/ship/blob/main/setting.ini)')
 elif option == 'products.csv':
 	st.subheader('產品列表products.csv')
 	st.info('* 請在CSV 檔中輸入產品資訊，欄位名稱依序是Item Name,length,width,high,weight,\
 		content,currency,description,price\
 		\n * 商城文件中的Item Name 必須要和products.csv 中的Item Name 相符，否則會無法對應到產品資訊\
 		\n * 使用Excel 修改CSV 檔可能會造成中文編碼錯誤，請儘量使用純文字檔編輯器或其他軟體修改')
+	st.markdown('[更新產品列表網址](https://github.com/Ryan-Fukuoka/ship/blob/main/products.csv)')
 	products
 
 # 上傳平台訂單CSV
