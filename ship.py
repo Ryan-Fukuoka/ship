@@ -93,7 +93,7 @@ if orderFile is not None:
 		ws['H'+str(rowNum)].value = order['Ship Zipcode'].unique()[0]
 		ws['I'+str(rowNum)].value = order['Ship State'].unique()[0]
 		ws['J'+str(rowNum)].value = order['Ship City'].unique()[0]
-		ws['K'+str(rowNum)].value = order['Ship Address1'].unique()[0]
+		ws['K'+str(rowNum)].value = order['Ship Address1'].unique()[0] + ' ' + str(order['Ship Address2'].unique()[0])
 		ws['P'+str(rowNum)].value = config['sender']['name']
 		ws['R'+str(rowNum)].value = config['sender']['tel']
 		ws['S'+str(rowNum)].value = config['sender']['zip']
