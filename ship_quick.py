@@ -32,7 +32,8 @@ def getExcel(joinDf, orderIds, seltNames, sndSec):
 		ws['H'+str(rowNum)].value = orders['Ship Zipcode'].unique()[0]
 		ws['I'+str(rowNum)].value = orders['Ship State'].unique()[0]
 		ws['J'+str(rowNum)].value = orders['Ship City'].unique()[0]
-		ws['K'+str(rowNum)].value = orders['Ship Address1'].unique()[0] + ' ' + str(orders['Ship Address2'].unique()[0])
+		ws['K'+str(rowNum)].value = str(orders['Ship Address1'].unique()[0]) + ' ' + \
+			('' if (str(orders['Ship Address2'].unique()[0]) == 'nan') else str(orders['Ship Address2'].unique()[0]))
 		ws['P'+str(rowNum)].value = sender[sndSec]['name']
 		ws['R'+str(rowNum)].value = sender[sndSec]['tel']
 		ws['S'+str(rowNum)].value = sender[sndSec]['zip']
